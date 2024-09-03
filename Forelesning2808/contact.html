@@ -30,10 +30,10 @@
                 <h2>kontakt meg</h2>
                 <form method="post">
                     <label for="navn">Navn</label>
-                    <input type="text" name="navn" placeholder="Omolom.." id="navn">
+                    <input type="text" name="navn" placeholder="Omolom.." id="navn" maxlenght="50" required>
                     <label>
                         E-post:
-                        <input type="email" name="email" placeholder="eksempel@hiof.no">
+                        <input type="email" name="email" placeholder="eksempel@hiof.no" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
                     </label>
                     <label>
                         Emne:
@@ -41,8 +41,21 @@
                     </label>
                     <label>
                         Melding:
-                        <textarea name="melding"></textarea>
+                        <textarea name="melding" required></textarea>
                     </label>
+                    <label>
+                        Nai
+                        <input type="radio" name="valg">
+                    </label>
+                    <label>
+                        Ya
+                        <input type="radio" name="valg">
+                    </label>
+                    <label>
+                        Maybe
+                        <input type="radio" name="valg">
+                    </label>
+                    <input type="submit" value="send melding">
                 </form>
             </section>
         </main>
