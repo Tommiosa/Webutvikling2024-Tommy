@@ -5,6 +5,12 @@ main{
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
+}
+
+@keyframes runningMario {
+    from {background-image: url('../sprites/staa.png');}
+    to {background-image: url('../sprites/lopende.png');}
 }
 
 #supermario{
@@ -12,11 +18,19 @@ main{
     background-size: contain;
     height: 50px;
     width: 50px;
+    position: absolute;
+    bottom: 53px;
+    animation-name: runningMario;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
 }
 
 #goomba{
-    background-image: url('../sprites/sopp.png');
+    /*background-image: url('../sprites/sopp.png');*/
     background-size: contain;
     height: 50px;
     width: 50px;
+    position: absolute;
+    bottom: 53px;
+    right: 0;
 }
