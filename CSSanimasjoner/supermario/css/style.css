@@ -50,45 +50,65 @@ main{
 
 }
 
+@keyframes marioDies {
+    0% {
+        background-image: url('../sprites/dead.png');
+        bottom: 53px;
+        left: 800;
+        transform: rotate(0deg) scale(1);
+
+    }
+
+    100% {
+        bottom: 150px;
+        transform: rotate(45deg) scale(1.8);
+        background-image: url('../sprites/dead.png');
+    }
+}
+
 @keyframes runningGoomba {
     from {
         background-image: url('../sprites/sopp.png');
-        right: 0;
     }
     to {
         background-image: url('../sprites/sopp-kopi.png');
-        right: 347;
     }
 }
 
 @keyframes movingGoomba {
     from {
-
+        right: 0;
+    }
+    to {
+        right: 347;
     }
 }
 
 #supermario{
-    background-image: url('../sprites/staa.png');
+    /*background-image: url('../sprites/staa.png');*/
     background-size: contain;
     height: 50px;
     width: 50px;
     position: absolute;
     bottom: 53px;
-    animation-name: runningMario, movingMario;
-    animation-iteration-count: infinite;
-    animation-duration: 0.5s, 7s;
-    animation-fill-mode: none, forwards;
+    animation-name: runningMario, movingMario, marioDies;
+    animation-iteration-count: infinite, 1, 1;
+    animation-duration: 0.5s, 7s, 0.8s;
+    animation-fill-mode: none, forwards, forwards;
+    animation-delay: 0s, 0s, 6s;
+    z-index: 999;
 }
 
 #goomba{
-    background-image: url('../sprites/sopp.png');
+    /*background-image: url('../sprites/sopp.png');*/
     background-size: contain;
     height: 50px;
     width: 50px;
     position: absolute;
     bottom: 53px;
     right: 0;
-    animation-name: runningGoomba;
+    animation-name: runningGoomba, movingGoomba;
     animation-iteration-count: infinite, infinite;
     animation-duration: 0.7s, 1s;
+    animation-direction: normal, alternate;
 }
