@@ -20,13 +20,51 @@ main{
     }
 
     20% {
-        left: 200px;
+        left: 407px;
+        bottom: 53px;
     }
+
+    40% {
+        left: 407px;
+        bottom: 116px;
+    }
+
+    50% {
+        left: 407px;
+        bottom: 53px;
+    }
+
+    60% {
+        left: 575px;
+        bottom: 53px;
+    }
+
+    70% {
+        bottom: 200px;
+    }
+
+    100% {
+        left: 800px;
+        bottom: 53px;
+    }
+
 }
 
 @keyframes runningGoomba {
-    from {background-image: url('../sprites/sopp.png');}
-    to {background-image: url('../sprites/sopp-kopi.png');}
+    from {
+        background-image: url('../sprites/sopp.png');
+        right: 0;
+    }
+    to {
+        background-image: url('../sprites/sopp-kopi.png');
+        right: 347;
+    }
+}
+
+@keyframes movingGoomba {
+    from {
+
+    }
 }
 
 #supermario{
@@ -38,7 +76,8 @@ main{
     bottom: 53px;
     animation-name: runningMario, movingMario;
     animation-iteration-count: infinite;
-    animation-duration: 0.5s, 3s;
+    animation-duration: 0.5s, 7s;
+    animation-fill-mode: none, forwards;
 }
 
 #goomba{
@@ -50,6 +89,6 @@ main{
     bottom: 53px;
     right: 0;
     animation-name: runningGoomba;
-    animation-iteration-count: infinite;
-    animation-duration: 0.7s;
+    animation-iteration-count: infinite, infinite;
+    animation-duration: 0.7s, 1s;
 }
