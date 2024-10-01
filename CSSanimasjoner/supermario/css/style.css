@@ -13,6 +13,22 @@ main{
     to {background-image: url('../sprites/lopende.png');}
 }
 
+@keyframes movingMario {
+    0% {
+        left: 0;
+        bottom: 53px;
+    }
+
+    20% {
+        left: 200px;
+    }
+}
+
+@keyframes runningGoomba {
+    from {background-image: url('../sprites/sopp.png');}
+    to {background-image: url('../sprites/sopp-kopi.png');}
+}
+
 #supermario{
     background-image: url('../sprites/staa.png');
     background-size: contain;
@@ -20,17 +36,20 @@ main{
     width: 50px;
     position: absolute;
     bottom: 53px;
-    animation-name: runningMario;
+    animation-name: runningMario, movingMario;
     animation-iteration-count: infinite;
-    animation-duration: 0.5s;
+    animation-duration: 0.5s, 3s;
 }
 
 #goomba{
-    /*background-image: url('../sprites/sopp.png');*/
+    background-image: url('../sprites/sopp.png');
     background-size: contain;
     height: 50px;
     width: 50px;
     position: absolute;
     bottom: 53px;
     right: 0;
+    animation-name: runningGoomba;
+    animation-iteration-count: infinite;
+    animation-duration: 0.7s;
 }
