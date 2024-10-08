@@ -1,52 +1,96 @@
+html {
+    font-size: 18px; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    text-decoration: none;
-    color: #000;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: repeat(3, auto);
+}
+
+#global-header {
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+main {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+}
 
 img {
-    width: 100%;
-    max-width: 400px;
- }
+    width: 100%; 
+    max-width: 400px; 
+}
 
 #main-logo {
-    width:100%;
-    max-width: 250px;
-    display: block;
-    margin: 0px auto;
- }
+    width: 100%; 
+    max-width: 250px; 
+    display: block; 
+    margin: 0px auto; 
+}
 
 .flex-menu {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap;
- }
+    display: flex; 
+    list-style: none; 
+    gap: 1rem; 
+    padding: 0; 
+    margin: 0; 
+    flex-wrap: wrap; 
+}
 
- .flex-menu a {
-    text-decoration: none;
+.flex-menu a {
+    text-decoration: none; 
     color: #000;
- }
+}
 
 .flex-space-b {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
- }
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 1rem; 
+}
 
- .flex-space-b form {
-    position: relative;
- }
+.flex-space-b h2 {
+    width: 100%; 
+}
 
- .flex-space-b form label {
-    visibility: hidden;
-    position: absolute;
- }
+.flex-space-b form {
+    position: relative; 
+}
 
- #outlet {
-    color: #ff0000;
- }
+.flex-space-b form label {
+    visibility: hidden; 
+    position: absolute; 
+}
+
+#outlet {
+    color: #ff0000; 
+}
+
+.product-card {
+    max-width: 350px;
+    min-width: 200px; 
+    width: 100%;
+    box-shadow: 13px 9px 20px 0px #efefef; 
+    border-radius: 4px; 
+    padding: 1rem; 
+}
