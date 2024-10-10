@@ -24,10 +24,10 @@ body {
 
 #banner {
     display: flex;
-    flex: wrap;
+    flex-wrap: wrap;
 
     img{
-        max-width: 60%;
+        max-width: 70%;
 
     }
 }
@@ -89,7 +89,7 @@ img {
     display: flex; 
     list-style: none; 
     gap: 1rem; 
-    padding: 1; 
+    padding: 0; 
     margin: 0; 
     flex-wrap: wrap; 
 
@@ -139,4 +139,52 @@ img {
     box-shadow: 13px 9px 20px 0px #efefef; 
     border-radius: 4px; 
     padding: 1rem; 
+}
+
+#menu{
+    display: flex;
+}
+
+/*Desktop*/
+@media only screen and (min-width:800px) {
+
+    .fa-burger{
+        display: none;
+    }
+    #menu{
+        display: flex !important;
+    }
+
+}
+
+/*Mobil*/
+@media only screen and (max-width:800px) {
+
+    #menu{
+        display: none;
+    }
+
+    #grid.container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    header, main, aside, footer{
+        grid-column: 1/2;
+    }
+
+    header{
+        grid-row: 1/2;
+    }
+
+    main{
+        grid-row: 2/3;
+    }
+
+    aside{
+        display: none;
+    }
+    footer{
+        grid-row: 3/4;
+    }
 }
